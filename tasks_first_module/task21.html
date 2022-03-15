@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+      let users = [
+        {
+          name: 'ivan',
+          age: 35,
+          region: 23,
+        },
+        {
+          name: 'sergei',
+          age: 32,
+          region: 123,
+        },
+        {
+          name: 'larisa',
+          age: 26,
+          region: 41,
+        },
+        {
+          region: 23,
+        },
+        {
+          region: 193,
+        },
+      ]
+      let val = {
+        name: 'Petyan',
+        height: 185,
+        age: 35,
+      }
+
+      const getObjectsHasEqualKeysOrValue = (objectsArray, object) => {
+        const targetObjectsArray = [];
+
+        if(Object.keys(object).length < 2) return [];
+
+        for(let index = 0; index < objectsArray.length; index++) {
+          let item = objectsArray[index];
+
+          for(let key in item) {
+            if(item[key] === object[key] || key in object) {
+              targetObjectsArray.push(item);
+              break;
+            }
+          }
+        }
+
+        return targetObjectsArray;
+      }
+
+      console.log(getObjectsHasEqualKeysOrValue(users, val));
+
+    </script>
+</body>
+</html>

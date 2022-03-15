@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+      const getObjectsWithKeyHasValue = (objectsArray, key, value) => {
+        const targetObjects = [];
+
+        for(let index = 0; index < objectsArray.length; index++) {
+          if(key in objectsArray[index] && objectsArray[index][key] === value) {
+            targetObjects.push(Object.assign({}, objectsArray[index]));
+          }
+        }
+
+        return targetObjects;
+      }
+
+      const array = [ { name: "aaa", price: 100 }, { name: "bbb", price: 200 }, {} ];
+
+      console.log(getObjectsWithKeyHasValue(array, "name", "aaa"));
+
+    </script>
+</body>
+</html>

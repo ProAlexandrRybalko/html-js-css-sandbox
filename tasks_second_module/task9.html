@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        const getSumElements = array => {
+          let sum = 0;
+          const allElements = [];
+
+          for(let i = 0; i < array.length; i++) {
+            allElements.push(...array[i]);
+          }
+
+          for(let i = 0; i < allElements.length; i++) {
+            sum += allElements[i];
+          }
+
+          return sum;
+        }
+
+        alert(getSumElements([[1, 2, 3], [4, 5], [6]]));
+
+    </script>
+</body>
+</html>

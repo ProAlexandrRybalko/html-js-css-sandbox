@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        const getUniqueUnitedElements = (...array) => {
+          const uniqueUnitedElements = [];
+
+          for(let index = 0; index < array.length; index++) {
+            const item = array[index];
+
+            for(let innerArrIndex = 0; innerArrIndex < item.length; innerArrIndex++) {
+              const element = item[innerArrIndex];
+
+              if(uniqueUnitedElements.indexOf(element) === -1) {
+                uniqueUnitedElements.push(element);
+              }
+            }
+          }
+
+          return uniqueUnitedElements;
+        }
+
+        alert(getUniqueUnitedElements([1, 2, 3], [2, 3, 4], [4, 5, 6]));
+
+    </script>
+</body>
+</html>

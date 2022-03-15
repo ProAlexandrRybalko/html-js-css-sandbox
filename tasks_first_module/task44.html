@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        const getIndexOfMaxElement = array => {
+          let indexOfMax = 0;
+          let maxValue = array[0];
+
+          for(let index = 0; index < array.length; index++) {
+            if(array[index] > maxValue) {
+              indexOfMax = index;
+              maxValue = array[index];
+            }
+          }
+
+          return indexOfMax;
+        }
+
+        alert(getIndexOfMaxElement([1, 2, 3, 4, 5]));
+
+    </script>
+</body>
+</html>

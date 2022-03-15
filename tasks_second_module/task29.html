@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        const getWeekDayByMonthDay = (num) => {
+          const days = {
+            1: 'Понедельник',
+            2: 'Вторник',
+            3: 'Среда',
+            4: 'Четверг',
+            5: 'Пятница',
+            6: 'Суббота',
+            7: 'Воскресенье'
+          }
+
+          const wholeWeeksNum = Math.floor(num / 7);
+          const weekDayKey = num - wholeWeeksNum * 7;
+
+          if(weekDayKey === 0) alert(days[7]);
+          else alert(days[weekDayKey]);
+        }
+
+        getWeekDayByMonthDay(8);
+
+    </script>
+</body>
+</html>

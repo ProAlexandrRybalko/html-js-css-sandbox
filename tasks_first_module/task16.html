@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+      const getIndexesOfElementsEqualValues = (array, firstValue, secondValue) => {
+        const elementsEqualParams = [];
+
+        for(let index = 0; index < array.length; index++) {
+          if(array[index] === firstValue || array[index] === secondValue) {
+            elementsEqualParams.push(array[index]);
+          }
+        }
+
+        return elementsEqualParams;
+      }
+
+      alert(getIndexesOfElementsEqualValues([1, 2, 3], 1, 2));
+
+    </script>
+</body>
+</html>

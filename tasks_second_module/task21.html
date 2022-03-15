@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        const removeUnderscoreCapitalize = str => {
+          let finalStr = '';
+          let flag = false;
+
+          for(let i = 0; i < str.length; i++) {
+            if(flag) {
+              finalStr += str[i].toUpperCase();
+              flag = false;
+            } else if(str[i] === "_") {
+              flag = true;
+            } else {
+              finalStr += str[i];
+            }
+          }
+
+          return finalStr;
+        }
+
+        alert(removeUnderscoreCapitalize('text_education_part_2_'));
+
+    </script>
+</body>
+</html>

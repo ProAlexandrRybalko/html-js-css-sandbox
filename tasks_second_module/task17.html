@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        const formatString = (url, object) => {
+          let finalStr = url + "?";
+
+          for(let key in object) {
+            finalStr += key + "=" + object[key] + "&";
+          }
+
+          return finalStr.slice(0, -1);
+        }
+
+        alert(formatString('https://docs.google.com', {id: 'terdh673bb8', limit: 5, offset: 0}));
+
+    </script>
+</body>
+</html>

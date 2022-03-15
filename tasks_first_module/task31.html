@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+      const getEvenElements = (array) => {
+        const oddElements = [];
+        const evenElements = [];
+
+        for(let index = 0; index < array.length; index++) {
+          if(array[index] % 2 !== 0) {
+            oddElements.push(array[index]);
+          }
+        }
+
+        for(let index = 0; index < array.length; index++) {
+          if(oddElements.indexOf(array[index]) === -1) {
+            evenElements.push(array[index]);
+          }
+        }
+
+        return evenElements;
+      }
+
+      alert(getEvenElements([1, 2, 3, 4, 5]))
+
+    </script>
+</body>
+</html>

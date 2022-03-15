@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+      const createChessField = () => {
+        let leftShift = '';
+        let rightShift = '';
+
+        for(let i = 0; i < 4; i++) {
+          leftShift += '# ';
+          rightShift += ' #';
+        }
+
+        let field = '';
+
+        for(let i = 0; i < 4; i++) {
+          field += leftShift + "\n";
+          field += rightShift + "\n";
+        }
+
+        return field;
+      }
+
+      alert(createChessField());
+
+    </script>
+</body>
+</html>

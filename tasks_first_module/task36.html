@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        const printAllElementsEqualToObject = (object, objectsArray) => {
+          const targetObjectsArray = [];
+          const keysValuesOfObject = Object.entries(object);
+
+          for(let index = 0; index < objectsArray.length; index++) {
+            const item = objectsArray[index];
+            const keysValues = Object.entries(item);
+
+            if(keysValuesOfObject.length !== keysValues.length) return -1;
+
+            let flag = false;
+
+            for(let recordIndex = 0; recordIndex < keysValues.length; recordIndex++) {
+              if(keysValues[recordIndex][0] !== keysValuesOfObject[recordIndex][0] ||
+                keysValues[recordIndex][1] !== keysValuesOfObject[recordIndex][1]) {
+                flag = true;
+                break;
+              }
+            }
+
+            if(!flag) {
+              targetObjectsArray.push(item);
+            }
+
+            flag = false;
+
+          }
+
+          console.log(targetObjectsArray);
+        }
+
+        const objArray = [
+          {name: "aaa", price: 100},
+          {name: "bbb", price: 200},
+          {name: "ccc", price: 300},
+        ]
+
+        printAllElementsEqualToObject({name: "aaa", price: 100}, objArray);
+
+    </script>
+</body>
+</html>

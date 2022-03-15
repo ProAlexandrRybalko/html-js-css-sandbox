@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+      const elements = [
+        {name: 'test', age: 45, country: 'RF', tel: '+79846466744'},
+        {name: 'test1', age: 23, country: 'RF', tel: '+79464747484'},
+        {name: 'test2', age: 18, country: 'RF', tel: '+376483876346'}
+      ];
+
+      const filterByAge = objectsArray => {
+        const filteredObjectsArray = [];
+
+        for(let i = 0; i < objectsArray.length; i++) {
+          const item = objectsArray[i];
+
+          if(item['age'] === 23) {
+            filteredObjectsArray.push(Object.assign({}, item));
+          }
+        }
+
+        return filteredObjectsArray;
+      }
+
+      console.log(filterByAge(elements))
+
+    </script>
+</body>
+</html>

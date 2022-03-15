@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+      const getDeepSumOfNumbers = num => {
+        let add = true;
+        let sum = num;
+
+        while(add) {
+          let temp = sum;
+          sum = 0;
+
+          while(temp > 0) {
+            let digit = temp % 10;
+            sum += digit;
+            temp = Math.floor(temp / 10);
+          }
+
+          if(sum < 10) add = false;
+        }
+
+        return sum;
+      }
+
+      alert(getDeepSumOfNumbers(469));
+
+    </script>
+</body>
+</html>

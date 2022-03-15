@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        const ifAllValuesInFirstArrFromSecond = (array1, array2) => {
+
+          for(let i = 0; i < array2.length; i++) {
+            if(array1.indexOf(array2[i]) === -1) return false;
+          }
+
+          return true;
+        }
+
+        alert(ifAllValuesInFirstArrFromSecond([1, 2, 3, 4, 5], [4, 5]));
+
+    </script>
+</body>
+</html>

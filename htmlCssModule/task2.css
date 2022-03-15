@@ -1,0 +1,18 @@
+.progress-bar {
+    border: 1px solid black;
+    background-color: black;
+    border-radius: 9px;
+    width: 100%;
+    height: 20px;
+    box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 );
+}
+.progress-bar::-webkit-progress-bar {
+    background: linear-gradient(#1d1d1d, #9c9c9c);
+    border-radius: 9px;
+}
+.progress-bar::-webkit-progress-value {
+    border: 1px solid dodgerblue;
+    border-radius: 9px 0 0 9px;
+    background: linear-gradient(0.5turn, #54b7fa, #0065ce, #54b7fa);
+    box-shadow: 5px 0 5px -2px;
+}

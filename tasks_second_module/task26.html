@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        const getNumberAmount = str => {
+          let amount = 0;
+
+          for(let i = 0; i < str.length; i++) {
+            if(isFinite(Number(str[i]))) {
+              amount++;
+            }
+          }
+
+          return amount;
+        }
+
+        alert(getNumberAmount('sdj473mn274bc82'));
+
+    </script>
+</body>
+</html>

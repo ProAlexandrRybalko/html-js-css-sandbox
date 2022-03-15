@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        const reorderWordsByLength = str => {
+          const wordsArray = [];
+          let flag = false;
+          let word = ''
+
+          if(str.indexOf(" ") !== 0) {
+            word += str[0];
+            flag = true;
+          }
+
+          for(let i = 1; i < str.length; i++) {
+            if(str[i] === " " && flag) {
+              wordsArray.push(word);
+              word = '';
+              flag = false;
+            }
+            else if(str[i] !== " " && !flag) flag = true;
+
+            if(flag) {
+              word += str[i];
+            }
+
+          }
+
+          for (let i = 0, endI = wordsArray.length - 1; i < endI; i++) {
+            for (let j = 0, endJ = endI - i; j < endJ; j++) {
+              if (wordsArray[j].length < wordsArray[j + 1].length) {
+                let swap = wordsArray[j];
+                wordsArray[j] = wordsArray[j + 1];
+                wordsArray[j + 1] = swap;
+              }
+            }
+          }
+
+          return wordsArray;
+        }
+
+        alert(reorderWordsByLength('test education part 2 '));
+
+    </script>
+</body>
+</html>

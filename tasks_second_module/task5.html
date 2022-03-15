@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+      const getAmountDividers = num => {
+        let amount = 2;
+
+        for(let i = 2; i < num; i++) {
+          if(num % i === 0) {
+            amount += 1;
+            break;
+          }
+        }
+
+        return amount > 2;
+      }
+
+      alert(getAmountDividers(31));
+
+    </script>
+</body>
+</html>

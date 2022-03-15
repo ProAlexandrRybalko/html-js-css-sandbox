@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        const getMostFrequentElem = array => {
+          const elems = [];
+          const frequency = [];
+
+          for(let i = 0; i < array.length; i++) {
+            const elem = array[i];
+
+            if (elems.indexOf(elem) === -1) {
+              elems.push(elem);
+              frequency.push(1);
+            }
+            else {
+              frequency[elems.indexOf(elem)] += 1;
+            }
+          }
+
+          let maxfrequency = 0;
+          let indexMaxElem;
+
+          for(let i = 0; i < frequency.length; i++) {
+            if(frequency[i] > maxfrequency) {
+              indexMaxElem = i;
+              maxfrequency = frequency[i];
+            }
+          }
+
+          return elems[indexMaxElem];
+        }
+
+        alert(getMostFrequentElem([1, 2, 3, 1, 1, 1]));
+
+    </script>
+</body>
+</html>

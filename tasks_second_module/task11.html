@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script type="module">
+      export default function getOddNum(array) {
+        const elements = [];
+        const frequency = [];
+
+        for(let i = 0; i < array.length; i++) {
+          const item = array[i];
+
+          if(elements.indexOf(item) === -1) {
+            elements.push(item);
+            frequency.push(1);
+          }
+          else {
+            frequency[elements.indexOf(item)] += 1;
+          }
+        }
+
+        const oddFrequencyValues = [];
+
+        for(let i = 0; i < elements.length; i++) {
+          if(frequency[i] % 2 !== 0) {
+            oddFrequencyValues.push(elements[i]);
+          }
+        }
+
+        return oddFrequencyValues;
+      }
+
+      alert(getOddNum([5, 8, 2, 4, 5, 4, 2, 4, 2, 5, 2, 4, 5]));
+
+    </script>
+</body>
+</html>

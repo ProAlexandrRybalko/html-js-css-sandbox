@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        const getObjectValues = object => {
+          const values = [];
+
+          for(let key in object) {
+            values.push(object[key]);
+          }
+
+          return values;
+        }
+
+        alert(getObjectValues({
+          name: 'test',
+          age: 34,
+          country: 'RF'
+        }));
+
+    </script>
+</body>
+</html>

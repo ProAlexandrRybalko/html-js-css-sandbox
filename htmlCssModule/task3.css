@@ -1,0 +1,16 @@
+.diagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: #d2ffd2;
+    border: 12px solid;
+    border-color: mediumseagreen yellowgreen mediumseagreen mediumseagreen;
+    border-radius: 50%;
+}
+
+.diagram p {
+    margin: 5px;
+}
+

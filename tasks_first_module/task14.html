@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+      const getElementsBiggerThanValues = (array, firstValue, secondValue) => {
+        const targetElements = [];
+
+        for(let index = 0; index < array.length; index++) {
+          if(array[index] > firstValue && array[index] > secondValue) {
+            targetElements.push(array[index]);
+          }
+        }
+
+        return targetElements;
+      }
+
+      alert(getElementsBiggerThanValues([1, 2, 3, 4, 5], 1, 2));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        const ifAllElementsPositive = array => {
+
+          for(let index = 0; index < array.length; index++) {
+            if(array[index] <= 0) {
+              return false;
+            }
+          }
+
+          return true;
+        }
+
+        alert(ifAllElementsPositive([1, 2, 3, 4, 5, -1]));
+
+    </script>
+</body>
+</html>

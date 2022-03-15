@@ -1,0 +1,19 @@
+a {
+    display: inline-block;
+    text-decoration: none;
+    border: 2px solid black;
+    padding: 7px;
+    margin: 5px;
+    transition: 0.1s;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    box-shadow: 0 0 3px black;
+    color: brown;
+    background: linear-gradient(blanchedalmond, #fad06d);
+}

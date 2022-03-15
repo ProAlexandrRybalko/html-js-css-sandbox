@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        const getObjectWithMaxKeyValue = (objectsArray, keyName) => {
+          let objectIndex = 0;
+          let maxValue = objectsArray[0][keyName];
+
+          for(let index = 0; index < objectsArray.length; index++) {
+            const item = objectsArray[index][keyName];
+
+            if(item > maxValue) {
+              objectIndex = index;
+              maxValue = item;
+            }
+          }
+
+          return objectsArray[objectIndex];
+        }
+        const objArray = [
+          {name: "aaa", price: 100},
+          {name: "bbb", price: 200},
+          {name: "ccc", price: 300},
+        ]
+        console.log(getObjectWithMaxKeyValue(objArray, "price"));
+
+    </script>
+</body>
+</html>

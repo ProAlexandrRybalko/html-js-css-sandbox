@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+      const printIndexesOfVal = (value, array) => {
+        const indexesArray = [];
+
+        for(let index = 0; index < array.length; index++) {
+          if(array[index] === value) {
+            indexesArray.push(index);
+          }
+        }
+
+        alert(indexesArray);
+      }
+
+      printIndexesOfVal(5, [ 5, 1, 2, 3, 4, 5 ]);
+
+    </script>
+</body>
+</html>

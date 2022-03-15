@@ -1,0 +1,35 @@
+.chain {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.round {
+    background-color: yellowgreen;
+    color: white;
+    min-width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.line {
+    min-width: 50px;
+    height: 5px;
+    background-color: #c7c7c7;
+}
+
+.round p {
+    text-align: center;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.grey {
+    background-color: #c7c7c7;
+    color: black;
+}
+

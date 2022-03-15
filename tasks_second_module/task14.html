@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+      const objects = [
+        {name: 'test', price: 200},
+        {name: 'test1', price: 300},
+        {name: 'test', price: 100},
+        {name: 'test', price: 600}
+      ];
+
+      const groupByName = array => {
+        const targetArr = [];
+        const namePrice = {};
+        for(let i = 0; i < array.length; i++) {
+          const item = array[i];
+          const name = item['name'];
+
+          if(!namePrice[name]) {
+            namePrice[name] = item['price'];
+          }
+          else {
+            namePrice[name] += item['price'];
+          }
+        }
+
+        for(let key in namePrice) {
+          targetArr.push({ name: key, price: namePrice[key]});
+        }
+
+
+        return targetArr;
+      }
+
+      console.log(groupByName(objects));
+
+    </script>
+</body>
+</html>

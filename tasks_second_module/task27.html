@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        const orderByLength = array => {
+          for (let i = 0, endI = array.length - 1; i < endI; i++) {
+            for (let j = 0, endJ = endI - i; j < endJ; j++) {
+              if (array[j].length > array[j + 1].length) {
+                let swap = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = swap;
+              }
+            }
+          }
+
+          return array;
+        }
+
+        alert(orderByLength(['test', 'education', 'part', '2', 'exceed.team']));
+
+    </script>
+</body>
+</html>
